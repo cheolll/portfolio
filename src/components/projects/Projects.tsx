@@ -1,0 +1,114 @@
+import './Projects.css';
+
+const projects = [
+  {
+    number: '01',
+    title: '실시간 채팅 서비스',
+    description:
+      'Socket.IO와 MongoDB를 기반으로 구현한 실시간 채팅 서비스입니다.',
+    period: '2026',
+    role: 'Backend / Full Stack',
+    tech: ['Node.js', 'Express', 'MongoDB', 'Socket.IO'],
+    github: 'https://github.com',
+  },
+  {
+    number: '02',
+    title: '여행 정보 플랫폼',
+    description:
+      '외부 API를 활용해 여행 정보를 제공하고 사용자가 여행지를 탐색할 수 있는 서비스입니다.',
+    period: '2025',
+    role: 'Backend / Frontend',
+    tech: ['Java', 'Spring Boot', 'React', 'MySQL'],
+    github: 'https://github.com',
+  },
+  {
+    number: '03',
+    title: '기업 서비스 프로젝트',
+    description:
+      '사용자 인증부터 데이터 처리, 알림 기능까지 다양한 서버 기능을 구현했습니다.',
+    period: '2025',
+    role: 'Backend Developer',
+    tech: ['Java', 'Spring Boot', 'MariaDB', 'Docker'],
+    github: 'https://github.com',
+  },
+];
+
+const Projects = () => {
+  return (
+    <section className="projects">
+      <div className="projects__container">
+
+        <div className="projects__header">
+          <div>
+            <span className="projects__eyebrow">
+              PROJECTS
+            </span>
+
+            <h2 className="projects__title">
+              직접 만들고,
+              <br />
+              <span>문제를 해결했습니다.</span>
+            </h2>
+          </div>
+
+          <p className="projects__description">
+            프로젝트를 진행하며 단순한 기능 구현을 넘어
+            실제 서비스에서 발생하는 문제를 해결하는
+            경험을 쌓았습니다.
+          </p>
+        </div>
+
+        <div className="projects__list">
+          {projects.map((project) => (
+            <article
+              className="project-card"
+              key={project.number}
+            >
+              <div className="project-card__number">
+                {project.number}
+              </div>
+
+              <div className="project-card__main">
+                <div className="project-card__info">
+                  <div className="project-card__meta">
+                    <span>{project.period}</span>
+                    <span>{project.role}</span>
+                  </div>
+
+                  <h3>{project.title}</h3>
+
+                  <p>
+                    {project.description}
+                  </p>
+
+                  <div className="project-card__tech">
+                    {project.tech.map((tech) => (
+                      <span key={tech}>
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="project-card__action">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${project.title} GitHub`}
+                  >
+                    <span>VIEW PROJECT</span>
+                    <strong>↗</strong>
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default Projects;

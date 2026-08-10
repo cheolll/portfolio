@@ -1,7 +1,4 @@
-import { useState } from 'react'
 import './App.css'
-import Hero from './components/Hero'
-
 
 /**
  * 
@@ -28,13 +25,13 @@ import Hero from './components/Hero'
 └── vite.config.ts
  * @returns 
  */
-function App() {
 
+import Home from './pages/home/Home';
+
+function App() {
   return (
-    <>
-      <Hero />
-    </>
-  )
+    <Home/>
+  );
 }
 
-export default App
+export default App;
