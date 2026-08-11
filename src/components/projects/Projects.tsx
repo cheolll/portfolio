@@ -1,6 +1,17 @@
 import './Projects.css';
 
-const projects = [
+interface Project {
+  number: string;
+  title: string;
+  description: string;
+  period: string;
+  role: string;
+  tech: string[];
+  github?: string;
+  demo?: string;
+}
+
+const projects: Project[] = [
   {
     number: '01',
     title: '실시간 채팅 서비스',
@@ -9,7 +20,8 @@ const projects = [
     period: '2026',
     role: 'Backend / Full Stack',
     tech: ['Node.js', 'Express', 'MongoDB', 'Socket.IO'],
-    github: 'https://github.com',
+    github: 'https://github.com/cheolll',
+    demo: 'https://github.com/cheolll',
   },
   {
     number: '02',
@@ -19,7 +31,8 @@ const projects = [
     period: '2025',
     role: 'Backend / Frontend',
     tech: ['Java', 'Spring Boot', 'React', 'MySQL'],
-    github: 'https://github.com',
+    github: 'https://github.com/cheolll',
+    demo: 'https://github.com/cheolll',
   },
   {
     number: '03',
@@ -29,15 +42,15 @@ const projects = [
     period: '2025',
     role: 'Backend Developer',
     tech: ['Java', 'Spring Boot', 'MariaDB', 'Docker'],
-    github: 'https://github.com',
+    github: 'https://github.com/cheolll',
+    demo: 'https://github.com/cheolll',
   },
 ];
 
 const Projects = () => {
   return (
-    <section className="projects">
+    <section className="projects" id="projects">
       <div className="projects__container">
-
         <div className="projects__header">
           <div>
             <span className="projects__eyebrow">
@@ -77,9 +90,7 @@ const Projects = () => {
 
                   <h3>{project.title}</h3>
 
-                  <p>
-                    {project.description}
-                  </p>
+                  <p>{project.description}</p>
 
                   <div className="project-card__tech">
                     {project.tech.map((tech) => (
@@ -91,21 +102,34 @@ const Projects = () => {
                 </div>
 
                 <div className="project-card__action">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`${project.title} GitHub`}
-                  >
-                    <span>VIEW PROJECT</span>
-                    <strong>↗</strong>
-                  </a>
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`${project.title} Live Demo`}
+                    >
+                      <span>LIVE DEMO</span>
+                      <strong>↗</strong>
+                    </a>
+                  )}
+
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`${project.title} GitHub`}
+                    >
+                      <span>GITHUB</span>
+                      <strong>↗</strong>
+                    </a>
+                  )}
                 </div>
               </div>
             </article>
           ))}
         </div>
-
       </div>
     </section>
   );
