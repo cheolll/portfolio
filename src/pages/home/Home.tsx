@@ -5,7 +5,7 @@ import Hero from '../../components/hero/Hero';
 import About from '@/components/about/About';
 import Skills from '@/components/skills/Skills';
 import Projects from '@/components/projects/Projects';
-import Contact from '@/components/contact/contact';
+import Contact from '@/components/contact/Contact';
 import ScrollTop from '@/components/sectionNav/ScrollTop';
 
 

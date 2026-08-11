@@ -25,7 +25,7 @@ const Contact = () => {
 
           <div className="contact__links">
             <a
-              href="mailto:your-email@example.com"
+              href="mailto:wkdcjf9204@gmail.com"
               className="contact__link"
             >
               <span className="contact__link-label">
@@ -33,7 +33,7 @@ const Contact = () => {
               </span>
 
               <span className="contact__link-value">
-                your-email@example.com
+                wkdcjf9204@gmail.com
               </span>
 
               <span className="contact__link-arrow">
@@ -42,7 +42,7 @@ const Contact = () => {
             </a>
 
             <a
-              href="https://github.com"
+              href="https://github.com/cheolll/portfolio"
               target="_blank"
               rel="noreferrer"
               className="contact__link"
@@ -52,7 +52,7 @@ const Contact = () => {
               </span>
 
               <span className="contact__link-value">
-                github.com
+                https://github.com/cheolll/portfolio
               </span>
 
               <span className="contact__link-arrow">
