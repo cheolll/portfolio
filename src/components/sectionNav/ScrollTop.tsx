@@ -1,4 +1,3 @@
-import { Button } from "@base-ui/react";
 import { useEffect, useState } from "react";
 import "./ScrollTop.css"
 
