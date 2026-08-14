@@ -25,15 +25,14 @@ const projects: Project[] = [
   },
   {
     number: '02',
-    title: '여행 정보 플랫폼',
-    description:
-      '외부 API를 활용해 여행 정보를 제공하고 사용자가 여행지를 탐색할 수 있는 서비스입니다.',
-    period: '2025',
-    role: 'Backend / Frontend',
-    tech: ['Java', 'Spring Boot', 'React', 'MySQL'],
-    github: 'https://github.com/cheolll',
-    demo: 'https://github.com/cheolll',
-  },
+    title: 'tourView',
+    description: '한국관광공사 TourAPI를 활용해 전국의 여행 정보를 검색하고 관광지 상세 정보를 탐색할 수 있는 반응형 여행 정보 웹 서비스입니다.',
+    period: '2026',
+    role: 'Frontend / API Integration',
+    tech: ['React', 'TypeScript', 'Vite', 'TanStack Query', 'Axios', 'CSS'],
+    github: 'https://github.com/cheolll/tourView',
+    demo: 'https://cheolll.github.io/tourView/',
+},
   {
     number: '03',
     title: '기업 서비스 프로젝트',
